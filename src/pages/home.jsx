@@ -23,7 +23,13 @@ const home = () => {
     </div>
   </section>
 
-  <Hero />
+  <section className="hero p-5">
+    <div className="container-xxl">
+      <div className="row">
+      <Hero />
+      </div>
+    </div>
+  </section>
 
   <section className="featured-products p-5">
     <div className="container-xxl">
@@ -37,7 +43,7 @@ const home = () => {
     </div>
   </section>
 
-  <section className="repair">
+  <section className="repair p-2">
     <div className="container-xxl">
       <div className="row">
         <div className="repair-details text-center d-flex flex-column  align-items-center p-3">

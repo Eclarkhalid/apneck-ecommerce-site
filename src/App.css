@@ -41,7 +41,7 @@ h2{
   font-size: 32px;
   margin: 10px;
 }
-span{
+.featured-products, .new-products span{
   border-radius: 20px;
   margin-bottom: 10px;
 }
@@ -86,6 +86,10 @@ button{
 .header-top-strip a{
   color: var(--primary1);
 }
+
+.header-top-strip{
+  background: var(--lighter1);
+}
 .input-group button{
   background: transparent;
   font-size: 14px;
@@ -93,7 +97,7 @@ button{
 }
 
 .header-upper{
-  background: var(--lighter2);
+  background: var(--lighter);
 }
 
 .nav-links a{

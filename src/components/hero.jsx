@@ -8,9 +8,6 @@ import icon6 from '../assets/images/icons/icon6.png'
 
 const hero = () => {
   return <>
-  <section className="hero p-2">
-    <div className="container-xxl">
-        <div className="row">
             <div className="hero-details d-flex justify-content-around text-center mx-5">
                 <div className='card p-2'>
                     <div className="card-details mx-3">
@@ -44,9 +41,6 @@ const hero = () => {
                 </div>
                 
             </div>
-        </div>
-    </div>
-  </section>
   </>
 }
 
