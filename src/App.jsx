@@ -9,9 +9,11 @@ import Contact from './pages/contact'
 import Cart from './pages/cart'
 import Login from './pages/login'
 import Wishlist from './pages/wishlist'
+import ShopContext from './components/shopcontext'
 
 function App() {
   return <>
+  <ShopContext>
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<Layout />}>
@@ -26,6 +28,7 @@ function App() {
     </Route>
   </Routes>
   </BrowserRouter>
+  </ShopContext>
   </>
 }
 
