@@ -1,9 +1,9 @@
 import React from 'react'
 
 const shop = () => {
-  return <>
-  <p>shop</p>
-  </>
+  return (
+    <div>shop</div>
+  )
 }
 
 export default shop

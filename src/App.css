@@ -64,6 +64,10 @@ button{
 
 }
 
+.hero .hero-details img{
+  width: 60px;
+}
+
 .button-link:hover{
   background: transparent;
   color: var(--primary1);

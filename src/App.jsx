@@ -11,7 +11,6 @@ import Login from './pages/login'
 import Wishlist from './pages/wishlist'
 
 function App() {
-
   return <>
   <BrowserRouter>
   <Routes>

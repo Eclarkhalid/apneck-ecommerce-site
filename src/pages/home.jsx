@@ -23,13 +23,7 @@ const home = () => {
     </div>
   </section>
 
-  <section className="hero p-5">
-    <div className="container-xxl">
-      <div className="row">
-      <Hero />
-      </div>
-    </div>
-  </section>
+  <Hero />
 
   <section className="featured-products p-5">
     <div className="container-xxl">
