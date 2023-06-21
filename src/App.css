@@ -342,3 +342,18 @@ tbody{
   border: 1px solid var(--lighter);
 }
 /* cart ends */
+
+/* product details */
+
+.details button{
+  background: transparent;
+  padding: 12px;
+  border: 1px solid;
+  color: black;
+  font-size: 14px;
+}
+
+.details input{
+  width: 100px;
+  align-items: center;
+}

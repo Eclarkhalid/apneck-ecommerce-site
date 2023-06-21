@@ -10,6 +10,7 @@ import Cart from './pages/cart'
 import Login from './pages/login'
 import Wishlist from './pages/wishlist'
 import ShopContext from './components/shopcontext'
+import Details from './pages/details'
 
 function App() {
   return <>
@@ -25,6 +26,7 @@ function App() {
       <Route path='cart' element={<Cart />} />
       <Route path='login' element={<Login />} />
       <Route path='wishlist' element={<Wishlist />} />
+      <Route path='details' element={<Details />} />
     </Route>
   </Routes>
   </BrowserRouter>
