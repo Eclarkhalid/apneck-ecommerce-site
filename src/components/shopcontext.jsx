@@ -1,35 +1,36 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
-import React, { createContext, useState } from 'react'
-import { PRODUCTS, PRODUCTS1 } from '../components/products';
+import React, { createContext, useState } from "react";
+import { PRODUCTS, PRODUCTS1 } from "../components/products";
 
 // context
 export const ShopContext = createContext(null);
 // function
 const getDefaultCart = () => {
-    // Returns an array of zeros with the length of the sum of the length of the PRODUCTS and PRODUCTS1 arrays.
+  // Returns an array of zeros with the length of the sum of the length of the PRODUCTS and PRODUCTS1 arrays.
   const cart = [];
 
   for (let i = 0; i < PRODUCTS.length + PRODUCTS1.length; i++) {
     cart[i] = 0;
   }
-  
+
   return cart;
 };
-
 
 const shopcontext = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-  for (const item in cartItems) {
-    if (cartItems[item] > 0) {
-      let itemInfo = PRODUCTS.find((product) => product.id === Number(item)) || PRODUCTS1.find((product) => product.id === Number(item));
-      totalAmount += cartItems[item] * itemInfo.price;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo =
+          PRODUCTS.find((product) => product.id === Number(item)) ||
+          PRODUCTS1.find((product) => product.id === Number(item));
+        totalAmount += cartItems[item] * itemInfo.price;
+      }
     }
-  }
-  return totalAmount.toFixed(2);
+    return totalAmount.toFixed(2);
   };
 
   const getTotalCartProducts = () => {
@@ -41,26 +42,25 @@ const shopcontext = (props) => {
     }
     return totalProducts;
   };
-  
 
   const addToCart = (productId) => {
     setCartItems((prev) => ({
       ...prev,
-      [productId]: prev[productId] + 1
+      [productId]: prev[productId] + 1,
     }));
   };
-  
+
   const removeToCart = (productId) => {
     setCartItems((prev) => ({
       ...prev,
-      [productId]: prev[productId] - 1
+      [productId]: prev[productId] - 1,
     }));
   };
-  
+
   const updateCartItemCount = (newAmount, productId) => {
     setCartItems((prev) => ({
       ...prev,
-      [productId]: newAmount
+      [productId]: newAmount,
     }));
   };
   const clearCart = () => {
@@ -69,7 +69,7 @@ const shopcontext = (props) => {
       updatedCartItems[productId] = 0;
     }
     setCartItems(updatedCartItems);
-  };  
+  };
 
   const resetCart = () => {
     setCartItems([]);
@@ -84,7 +84,6 @@ const shopcontext = (props) => {
   const closeProductDetails = () => {
     setSelectedProduct(null);
   };
-  
 
   const contextValue = {
     cartItems,
@@ -109,7 +108,4 @@ const shopcontext = (props) => {
   );
 };
 
-
-export default shopcontext
-
-
+export default shopcontext;
